@@ -1,0 +1,112 @@
+.home--screen{
+    width: 60%;
+    min-height: 86vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2vw 0 2vw;
+}
+
+.home--sub--screen{
+    width: 100%;
+    min-height: 86vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search--bar--container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1vh;
+    padding: 1vh 0 1vh 0;
+    width: 100%;
+}
+
+.back--btn, .search--btn{
+    width: 6vh;
+    height: 6vh;
+    background-color: #eee;
+    border-radius: 1vh;
+    padding: 1.5vh;
+    transition: 0.2s;    
+    cursor: pointer;
+}
+
+.back--btn{
+    content: url("../../icons/arrow-small-left-black.png");
+    margin-right: 1vh;
+}
+
+.search--btn{
+    content: url("../../icons/search-black.png");
+    margin-left: 1vh;
+}
+
+.back--btn:active, .search--btn:active{
+    transform: scale(0.8);
+}
+
+.search--bar{
+    width: 100%;
+    height: 6vh;
+    font-size: 0.8rem;
+    background-color: #eee;
+    border: 0;
+    border-radius: 1vh;
+    margin: 1vh 0;
+    text-indent: 1vw;
+}
+.search--bar:focus{
+    outline:none;
+}
+.search--bar::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+    height: 10px;
+    padding-right: 1vw;
+    content: url("../../icons/close.png");
+    cursor: pointer;
+}
+
+.homescreen--carousel{
+    width: 100%;
+    border-radius: 1vh;
+    overflow: hidden;
+}
+.carousel--item{
+    position: relative;
+    cursor: pointer;
+}
+.carousel--title{
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: #000 0 0 10px;
+    border-radius: 0;
+    width: 100%;
+    cursor: pointer;
+    padding: 3vh 0;
+}
+
+.card--container{
+    margin: 2vw;
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5vw;
+}
+
+
+@media screen and (max-width: 700px){
+    .home--screen{
+        width: 100%;
+    }
+    .search--bar{
+        text-indent: 5vw;
+    }
+}
