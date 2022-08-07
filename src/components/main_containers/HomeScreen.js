@@ -57,7 +57,7 @@ export default function HomeScreen() {
         getMovies();
         setTimeout(()=>{
             document.getElementById('card-placeholder').style.display = 'none';
-        }, 2500);
+        }, 2000);
     },[backBtnFlag]);
 
     // console.log(carouselArray[6].backDrop);
