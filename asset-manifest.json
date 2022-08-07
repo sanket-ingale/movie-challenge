@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/movie-challenge/static/css/main.5f44e200.css",
-    "main.js": "/movie-challenge/static/js/main.4d6b4a98.js",
+    "main.css": "/movie-challenge/static/css/main.1dfb81b8.css",
+    "main.js": "/movie-challenge/static/js/main.7dc2fab9.js",
     "static/js/787.2eca7e12.chunk.js": "/movie-challenge/static/js/787.2eca7e12.chunk.js",
     "static/media/cinema.jpg": "/movie-challenge/static/media/cinema.aa3f4b9578faae145653.jpg",
     "static/media/camera.png": "/movie-challenge/static/media/camera.bb6dd8ae99cb956071b0.png",
     "static/media/user.png": "/movie-challenge/static/media/user.a6143582309785dca610.png",
     "static/media/search-black.png": "/movie-challenge/static/media/search-black.f8625530f28f5f5d0bfa.png",
     "index.html": "/movie-challenge/index.html",
-    "main.5f44e200.css.map": "/movie-challenge/static/css/main.5f44e200.css.map",
-    "main.4d6b4a98.js.map": "/movie-challenge/static/js/main.4d6b4a98.js.map",
+    "main.1dfb81b8.css.map": "/movie-challenge/static/css/main.1dfb81b8.css.map",
+    "main.7dc2fab9.js.map": "/movie-challenge/static/js/main.7dc2fab9.js.map",
     "787.2eca7e12.chunk.js.map": "/movie-challenge/static/js/787.2eca7e12.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f44e200.css",
-    "static/js/main.4d6b4a98.js"
+    "static/css/main.1dfb81b8.css",
+    "static/js/main.7dc2fab9.js"
   ]
 }
