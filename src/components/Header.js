@@ -15,9 +15,11 @@ export default function Header(props) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const handleOnClick = () => userActions.isLoggedIn ? handleClose() : dispatch(loggedOut());
+
     return (
         <div className="header">
-            <ul className='nav--bar--item' onClick={() => dispatch(loggedOut())}>
+            <ul className='nav--bar--item' onClick={handleOnClick}>
                 <img className="logo--img" src={require("../icons/camera.png")} alt="movie-logo"/>
                 <li className='logo--text'>WatchMovie</li>
             </ul>

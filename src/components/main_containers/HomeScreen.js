@@ -4,6 +4,7 @@ import React, {useState, useEffect} from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import MovieCard from '../sub_containers/MovieCard';
 import MovieModal from '../sub_containers/MovieModal';
+import MovieCardPlaceholder from '../../placeholders/MovieCardPlaceholder'
 
 export default function HomeScreen() {
 
@@ -55,6 +56,9 @@ export default function HomeScreen() {
 
     useEffect(() => {
         getMovies();
+        setTimeout(()=>{
+            document.getElementById('card-placeholder').style.display = 'none';
+          }, 2500);
     },[]);
 
     // console.log(carouselArray[6].backDrop);
@@ -100,6 +104,13 @@ export default function HomeScreen() {
                         )
                     })}
                 </Carousel>
+                <div className='card--container'id='card-placeholder'>
+                    <MovieCardPlaceholder/>
+                    <MovieCardPlaceholder/>
+                    <MovieCardPlaceholder/>
+                    <MovieCardPlaceholder/>
+                    <MovieCardPlaceholder/>
+                </div>
                 <div className='card--container'>
                     {movieTrendingCards}
                 </div>

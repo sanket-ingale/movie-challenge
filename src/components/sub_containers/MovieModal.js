@@ -14,7 +14,7 @@ export default function MovieModal(props) {
                             src={`https://image.tmdb.org/t/p/original${props.poster_path}`}
                             onError={({ currentTarget }) => {
                                 currentTarget.onerror = null;
-                                currentTarget.src=require("../../images/movie-poster-placeholder.png");
+                                currentTarget.src=require("../../placeholders/movie-poster-placeholder.png");
                             }}
                             alt="Movie"
                         />

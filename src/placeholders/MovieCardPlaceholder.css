@@ -1,0 +1,46 @@
+.movie--card--placeholder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    gap: 1vh;
+    width: 100%;
+    height: min-content;
+    padding: 10px;
+    background-color: #eee;
+    transition: 0.2s;
+    border-radius: 1vh;
+    cursor: pointer;
+}
+
+.movie--img--placeholder{
+    width: 100%;
+    height: 35vh;
+    border-radius: 1vh;
+    background-color: #ddd;
+    animation: fadeout 0.5s linear infinite alternate;
+}
+
+.movie--info--placeholder{
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1vh;
+    width: 100%;
+}
+
+.movie--title--placeholder{
+    width: 100%;
+    height: 1vh;
+    border-radius: 1vh;
+    background-color: #ddd;
+    animation: fadeout 0.5s linear infinite alternate;
+}
+
+.movie--subtitle--placeholder{
+    width: 40%;
+    height: 1vh;
+    border-radius: 1vh;
+    background-color: #ddd;
+    animation: fadeout 0.5s linear infinite alternate;
+}
