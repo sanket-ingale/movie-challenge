@@ -17,7 +17,7 @@ export default function HomeScreen() {
     const [carouselItem, setCarouselItem] = useState({});
     const urlTrending = 'https://api.themoviedb.org/3/trending/movie/day?api_key=e4c0763bea0e844e73ba3886a1b8a175';
     const searchURL = `https://api.themoviedb.org/3/search/movie?api_key=e4c0763bea0e844e73ba3886a1b8a175&query=${searchQuery}&page=1&include_adult=${false}`;
-    
+
     const getMovies = async () => {
         setMovieTrendingData(await (await fetch(urlTrending)).json());
         // console.log(data);
@@ -41,7 +41,6 @@ export default function HomeScreen() {
     
     const getSearchMovies = async () => {
         setMovieSearchData(await (await fetch(searchURL)).json());
-        setSearchBtnFlag(false);
         setBackBtnFlag(true);
     }
 
@@ -58,8 +57,8 @@ export default function HomeScreen() {
         getMovies();
         setTimeout(()=>{
             document.getElementById('card-placeholder').style.display = 'none';
-          }, 2500);
-    },[]);
+        }, 2500);
+    },[backBtnFlag]);
 
     // console.log(carouselArray[6].backDrop);
     // console.log(movieTrendingData);
@@ -80,9 +79,9 @@ export default function HomeScreen() {
                 {searchBtnFlag && <div type="button" className="search--btn" onClick={searchClick}></div>}               
             </div>
             {movieSearchData.total_results === 0 && backBtnFlag && (
-                <div className="error-msg">
+                <span className="error-msg">
                     Sorry, no such movie found :(
-                </div>
+                </span>
             )}
             {backBtnFlag ?
             <div className='card--container'>
@@ -105,11 +104,7 @@ export default function HomeScreen() {
                     })}
                 </Carousel>
                 <div className='card--container'id='card-placeholder'>
-                    <MovieCardPlaceholder/>
-                    <MovieCardPlaceholder/>
-                    <MovieCardPlaceholder/>
-                    <MovieCardPlaceholder/>
-                    <MovieCardPlaceholder/>
+                    {[0,0,0,0,0].map(i => <MovieCardPlaceholder/>)}
                 </div>
                 <div className='card--container'>
                     {movieTrendingCards}
